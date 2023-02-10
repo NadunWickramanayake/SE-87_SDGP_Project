@@ -16,7 +16,7 @@ class Scene extends StatelessWidget {
         // iphone142Hud (1:45)
         padding: EdgeInsets.fromLTRB(35*fem, 172*fem, 36*fem, 137*fem),
         width: double.infinity,
-        decoration: BoxDecoration (
+        decoration: const BoxDecoration (
           gradient: LinearGradient (
             begin: Alignment(0, -1),
             end: Alignment(0, 1),
@@ -45,7 +45,7 @@ class Scene extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration (
                             borderRadius: BorderRadius.circular(139*fem),
-                            image: DecorationImage (
+                            image: const DecorationImage (
                               fit: BoxFit.contain,
                               image: AssetImage (
                                 'assets/page-1/images/ellipse-1-bg.png',
@@ -103,7 +103,7 @@ class Scene extends StatelessWidget {
               height: 68*fem,
               decoration: BoxDecoration (
                 borderRadius: BorderRadius.circular(98.5*fem),
-                gradient: LinearGradient (
+                gradient: const LinearGradient (
                   begin: Alignment(-0, -1),
                   end: Alignment(0.004, 0.691),
                   colors: <Color>[Color(0xff1e3c62), Color(0x001e3c62)],

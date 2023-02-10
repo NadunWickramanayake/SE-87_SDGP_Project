@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 import 'package:myapp/page-1/Page1.dart';
-//import 'package:myapp/page-1/Page2.dart';
+import 'package:myapp/page-1/Page2.dart';
 
 void main() => runApp(MyApp());
 
