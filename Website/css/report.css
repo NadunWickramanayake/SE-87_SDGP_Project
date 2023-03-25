@@ -1,0 +1,34 @@
+/* Report generating page styles */
+
+.report-container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    }
+    
+    .report-header {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    }
+    
+    .report-body {
+    padding: 10px;
+    }
+    
+    .report-body p {
+    margin-bottom: 10px;
+    }
+    
+    #score {
+    font-weight: bold;
+    }
+    
+    #assessment {
+    font-weight: bold;
+    text-transform: uppercase;
+    }
