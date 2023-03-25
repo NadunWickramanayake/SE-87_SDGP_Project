@@ -1,34 +1,50 @@
-/* Report generating page styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
 
-.report-container {
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    }
-    
-    .report-header {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px;
-    }
-    
-    .report-body {
-    padding: 10px;
-    }
-    
-    .report-body p {
-    margin-bottom: 10px;
-    }
-    
-    #score {
-    font-weight: bold;
-    }
-    
-    #assessment {
-    font-weight: bold;
-    text-transform: uppercase;
-    }
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+.chatbox {
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.chatlog {
+	height: 300px;
+	overflow-y: scroll;
+	padding: 10px;
+}
+
+.inputbox {
+	display: flex;
+	padding: 10px;
+}
+
+#userinput {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+}
+
+#sendbutton {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #007bff;
+	color: #fff;
+	cursor: pointer;
+}

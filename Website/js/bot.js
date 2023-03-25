@@ -51,3 +51,39 @@ form.addEventListener('submit', async function (e) {
     }
 
 });
+
+$(document).ready(function() {
+	$('form').submit(function(event) {
+		event.preventDefault();
+		var formData = {
+			'q1': $('input[name=q1]:checked').val(),
+			'q2': $('input[name=q2]:checked').val(),
+			'q3': $('input[name=q3]:checked').val(),
+			'q4': $('input[name=q4]:checked').val(),
+			'q5': $('input[name=q5]:checked').val(),
+			'q6': $('input[name=q6]:checked').val(),
+			'q7': $('input[name=q7]:checked').val()
+		};
+		$.ajax({
+			type: 'POST',
+			url: '/predict',
+			contentType: 'application/json',
+			data: JSON.stringify(formData),
+			success: function(result) {
+				$('.result h2').text('Your depression level is: ' + result['depression_level']);
+				$('.result p').text(result['message']);
+				$('.result').fadeIn();
+				if (result['emergency_numbers']) {
+					alert('Please contact one of these emergency numbers:\n' + result['emergency_numbers']);
+				}
+			},
+			error: function(error) {
+				$('.error').text(error.responseJSON.message);
+				$('.error').fadeIn();
+			}
+		});
+	});
+
+	$('.result').hide();
+	$('.error').hide();
+});

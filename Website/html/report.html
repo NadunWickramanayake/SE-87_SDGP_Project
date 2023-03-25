@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-    <!--styleSheet-->
-    <link rel="stylesheet" href="../css/report.css">
+	<title>Depression Predictor</title>
+	<link rel="stylesheet" type="text/css" href="../css/report.css">
 </head>
 <body>
-
-    <div class="report-container">
-        <div class="report-header">
-          <h2>Your Depression Screening Report</h2>
-        </div>
-        <div class="report-body">
-          <p>Your score is: <span id="score"></span></p>
-          <p>Based on your score, it appears that you are <span id="assessment"></span>.</p>
-        </div>
-      </div>
-      
+	<div class="container">
+		<h1>Depression Predictor Chatbot</h1>
+		<div class="chatbox" id="chatbox">
+			<div class="chatlog" id="chatlog"></div>
+			<div class="inputbox">
+				<input type="text" id="userinput" placeholder="Type your response here...">
+				<button id="sendbutton">Send</button>
+			</div>
+		</div>
+	</div>
+	<script src="../js/report.js"></script>
 </body>
- <!--JavaScript linking-->  
- <script src="../js/report.js"></script>  
 </html>
