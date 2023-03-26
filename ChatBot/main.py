@@ -2,7 +2,7 @@ import nltk
 import pickle
 
 # Load the sentiment analysis model
-with open('sentiment_analysis_model.pkl', 'rb') as file:
+with open('..\depression-analysis(1).ipynb', 'rb') as file:
     sentiment_model = pickle.load(file)
 
 
