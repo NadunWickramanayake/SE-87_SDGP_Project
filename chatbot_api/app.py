@@ -31,22 +31,29 @@ questions = [
     "8. Have you been having any thoughts of self-harm or suicide?"
 ]
 
+
 # Route for chat
 @app.route('/api/chat', methods=['GET', 'POST'])
 def chat():
 
     if request.method == "POST":
 
-        # msg = request.form.get('meg')
+        req = request.json
+        responses = req['responses']
 
-        # if len(msg) == 0:
-        #     return jsonify({'status': "error", 'msg': "Message not exist!"})
+        # questions = initial()[questions]
+
+        if len(responses) != len(questions):
+            return jsonify({'status': "error", 'msg': "Question count and answers count not matched!"})
         
-        # else:
-            # return jsonify({'status': "success", 'msg': "This is a auto generate msg!"})
+        else:
+            bot_response = ""
+            report_result = []
+            report = ""
 
-
-        return jsonify({'status': "success", 'msg': "This is a auto generate msg!"})
+            bot_response, report_result, report = prediction.depression_bot(questions=questions, responses=responses, name="Patient")
+            
+            return jsonify({'status': "success", 'result_status': bot_response, "result": report_result})
 
     return jsonify({'status': "error", 'msg': "Something went wrong!"})
 
