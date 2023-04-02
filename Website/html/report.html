@@ -2,19 +2,37 @@
 <html>
 <head>
 	<title>Depression Predictor</title>
-	<link rel="stylesheet" type="text/css" href="../css/report.css">
 </head>
 <body>
-	<div class="container">
-		<h1>Depression Predictor Chatbot</h1>
-		<div class="chatbox" id="chatbox">
-			<div class="chatlog" id="chatlog"></div>
-			<div class="inputbox">
-				<input type="text" id="userinput" placeholder="Type your response here...">
-				<button id="sendbutton">Send</button>
+	
+	<main class="content" style="opacity: 0.9;">
+		<div class="container p-0">
+	
+			<div class="card">
+				<div class="row g-0">
+					<div class="col-12">
+						<div class="py-2 px-4 border-bottom d-none d-lg-block text-center">
+							<h1>Depression Predictor Chatbot</h1>
+						</div>
+	
+						<div class="position-relative">
+							<div class="chat-messages p-4" id="msg-list-body">
+	
+							</div>
+						</div>
+	
+						<div class="flex-grow-0 py-3 px-4 border-top">
+							<div class="input-group">
+								<input id="typeMsg" type="text" class="form-control" placeholder="Type your message">
+								<button id="submitBtn" type="button" class="btn btn-primary ml-3" onclick="sendMsg()">Send</button>
+							</div>
+						</div>
+	
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<script src="../js/report.js"></script>
+	</main>
+
 </body>
 </html>
