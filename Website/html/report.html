@@ -175,7 +175,19 @@
 				const res = await response.json();
 				if (res != null) {
 
-					console.log(res)
+					if (res.status == "success") {
+						chatBodyHTML += chatItem("bot", res.result_status);
+						res.result.forEach(e => {
+							chatBodyHTML += chatItem("bot", e);
+						});
+						refreshChat();
+
+					} else {
+						chatBodyHTML += chatItem("bot", res.msg);
+						refreshChat();
+					}
+
+					setTimeout(()=>resetChat(), 2000);
 				}
 			}
 			
