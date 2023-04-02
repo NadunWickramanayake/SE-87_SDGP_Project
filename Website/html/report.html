@@ -94,5 +94,124 @@
 		</div>
 	</main>
 
+	<script src="../js/jquery-3.2.1.min.js"></script>
+
+	<script>
+
+		var msgList = [];
+		var chatBodyHTML = "";
+		var questions = [];
+		var answers = [];
+		var questionNumber = 0;
+
+		getQuestions();
+		refreshChat();
+
+		document.getElementById("typeMsg").focus();
+
+		function chatItem(type, msg) {
+			var chatType = type == "you" ? "chat-message-right" : "chat-message-left";
+			var chatName = type == "you" ? "You" : "Bot";
+
+			return `<div class="${chatType} pb-4">
+					<div>
+						<img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="rounded-circle mr-1" alt="Bot" width="40" height="40">
+					</div>
+					<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+						<div class="font-weight-bold mb-1">${chatName}</div>
+						${msg}
+					</div>
+				</div>`
+		}
+
+		function sendMsg() {
+			var msg = document.getElementById("typeMsg").value;
+			
+			if (msg === "") {
+				alert("Please type message!");
+			
+			} else {
+				chatBodyHTML += chatItem("you", msg);
+				document.getElementById('typeMsg').value = "";
+				document.getElementById("typeMsg").focus();
+				refreshChat();
+			}
+		}
+
+		function refreshChat() {
+			document.getElementById("msg-list-body").innerHTML = chatBodyHTML;
+			
+			var messageBody = document.getElementById('msg-list-body');
+			messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
+		}
+
+		async function getResponseFromBot(msg) {
+
+			if (questions.length > questionNumber) {
+				answers.push(msg);
+
+				chatBodyHTML += chatItem("bot", questions[questionNumber]);
+				refreshChat();
+				questionNumber = questionNumber + 1;
+
+			}
+			
+		}
+
+		function resetChat() {
+			let text = "Would you like to take the depression screening test again? Press Ok.";
+			if (confirm(text) == true) {
+
+				getQuestions();
+				refreshChat();
+
+				document.getElementById("submitBtn").disabled = false;
+				document.getElementById('typeMsg').value = "";
+				document.getElementById("typeMsg").focus();
+			}
+		}
+
+		async function getQuestions() {
+
+			msgList = [];
+			chatBodyHTML = "";
+			questions = [];
+			answers = [];
+			questionNumber = 0;
+
+			const response = await fetch('http://127.0.0.1:5000/api/initial', {
+				mode: 'cors',
+				method: 'GET',
+				contentType: "application/json",
+				headers: {
+					'Content-Type': 'application/json',
+					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+					"Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+					'Access-Control-Allow-Origin': '*'
+				}
+			});
+			const res = await response.json();
+			if (res != null) {
+				if (res.hasOwnProperty('msg')) {
+					res.msg.forEach(e => {
+						chatBodyHTML += chatItem("bot", e);
+					})
+					refreshChat();
+				}
+
+				if (res.hasOwnProperty('questions')) {
+					questions = res.questions;
+				}
+				
+				if (questions.length > 0) {
+					chatBodyHTML += chatItem("bot", questions[0]);
+					refreshChat();
+					questionNumber = questionNumber + 1;
+				}
+			}
+
+		}
+
+	</script>
 </body>
 </html>
