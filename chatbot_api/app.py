@@ -41,8 +41,6 @@ def chat():
         req = request.json
         responses = req['responses']
 
-        # questions = initial()[questions]
-
         if len(responses) != len(questions):
             return jsonify({'status': "error", 'msg': "Question count and answers count not matched!"})
         
