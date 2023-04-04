@@ -2,31 +2,144 @@
 <html lang="en">
 <head>
     <title>Questionnaire For Depression Screening</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     
-    <!--Heading-->
-    <div class="topic">
-        <img src="MindGuard.png" width="200" height="200">
+    
+    <header>
+        <a href="#" ><img src="../app_photos/logo.png" class="logo"></a>
+        <ul>
+            <li><a href="../html/index.html" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                    <a href="#">Quick Screening</a>
+                    <a href="../html/depressionBot.html">In-Depth Screening</a>
+                </div>
+            </li>
+            <li><a href="#">About Us</a></li>	
+            <li class="right"><a href="#">Logout</a></li>
+        </ul>
+    </header>
+    
+    <style>
+        /* Navigation Bar Styling */
+header {
+position: relative;	
+top: 0;
+left: 0;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+background-color: #140238;
+padding: -40px 0px;
+box-shadow: 0px 0px 10px rgba(123, 102, 210, 0.1);
+}
+
+.logo {
+
+margin-top: 20px;
+height: 60px;
+width: 60px;
+}
+
+ul {
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+li {
+margin-right: 20px;
+}
+
+li:last-child {
+margin-right: 0;
+}
+
+a {
+color: #7a46f3;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+text-transform: uppercase;
+padding: 10px 20px;
+border-radius: 5px;
+transition: all 0.3s ease;
+}
+
+a.active,
+a:hover {
+background-color: #aca3ea;
+color: #6d59bd;
+}
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+    
+        .dropbtn {
+          font-size: 16px;
+          border: none;
+          outline: none;
+          color: white;
+          padding: 12px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+    
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          z-index: 1;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          margin-top: 5px;
+        }
+    
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+    
+        .dropdown-content a:hover {background-color: #685acf;}
+    
+        .dropdown:hover .dropdown-content {display: block;}
+    
+        .dropdown:hover .dropbtn {background-color: #1e0298;}
         
-    </div>
+        .right {
+            float: right;
+            margin-left: 150px;
 
-    <!--Sign In-->
-    <div class="signin">
-        <a href="#"><b>Register</b></a>
-        <a href="#"><b>Sign In</b></a>
-    </div>
+        }
+        
+        .right a {
+            display: inline-block;
+            background-color: #3754e7;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        
+        .right a:hover {
+            background-color: #706898;
+        }
+    </style>
 
-    <!--Navigation-->
-    <div class="navigation">
-        <a href="#Home">Home</a>
-        <a class="active" href="#Screening">Screening</a>
-        <a href="#Results">Results</a>
-        <a href="#Info">Additional Information</a>
-        <a href="#Emergency">Emergency Numbers</a>
-      </div>
-      
+   
     <!--Page heading-->
     <div class="headingpattern">
         <h1><u>SCREENING FOR DEPRESSION</u></h1>
@@ -41,7 +154,7 @@
 
     <!--Depression Screening option 01-->
     <div class="screeningoptionbox">
-        <a href="Quickscreening.html"><p><b>Quick Screening</b></p></a>
+        <a href=""><p><b>Quick Screening</b></p></a>
     </div>
 
     <!--Adding Space-->
@@ -49,7 +162,7 @@
 
      <!--Depression Screening option 02-->
      <div class="screeningoptionbox">
-        <a href=""><p><b>Indepth Screening</b></p></a>
+        <a href="../html/depressionBot.html"><p><b>Indepth Screening</b></p></a>
     </div>
 
     <!--Adding Space-->
