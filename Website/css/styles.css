@@ -65,6 +65,13 @@ body {
     font-family: Arial;
 }
 
+.diagnosisheader{
+    color: #e69b00;
+    text-align: center;
+    font-size:xx-large;
+    font-family: Arial;
+}
+
 .fontbox{
     overflow: hidden;
     background-color: #1e3b62;
@@ -74,6 +81,22 @@ body {
     color: #ddd;
     border-radius: 7px;
     padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Arial;
+
+}
+
+.fontbox01{
+    overflow: hidden;
+    background-color: #1e3b62;
+    width: 80%;
+    text-align: justify;
+    margin: auto;
+    color: #ddd;
+    border-radius: 7px;
+    padding-left: 70px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -112,4 +135,25 @@ body {
     padding-left: 20px;
     text-align: left; 
     font-size: 10px;
+}
+button {
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 50%;
+   
+}
+
+.depressionscreeningcontent{
+    font-size: large;
+    font-style: italic;
+    color: black;
+    text-align: justify;
+    padding-right:5%;
+    padding-left: 5%;
+}
+
+.emergencyfont{
+    color: #9c1c1c;
 }

@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <title>Questionnaire For Depression Screening</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/bot.css">
+=======
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+>>>>>>> 150e964aea0bbace53f4626a9c8042e8a4c2211f
 </head>
 <body>
     
@@ -21,7 +26,11 @@
 
     <!--Navigation-->
     <div class="navigation">
+<<<<<<< HEAD
         <a href="index.html">Home</a>
+=======
+        <a href="#Home">Home</a>
+>>>>>>> 150e964aea0bbace53f4626a9c8042e8a4c2211f
         <a class="active" href="screening.html">Screening</a>
         <a href="#Results">Results</a>
         <a href="#Info">Additional Information</a>
@@ -133,73 +142,168 @@
         <br>
         <br>
         <div class="Questionbox">
-            <h1>1. uggugugiihlkhlhlhlhlh</h1>
-            <input type="radio" name="Option01" >Yes
-            <input type="radio" name="Option02">Maybe Yes
-            <input type="radio" name="Option03">I am not sure
-            <input type="radio" name="Option04">Maybe Not
-            <input type="radio" name="Option05">No
-            
+            <h1>1. Little intrest or pleasure in doing things</h1>
+            <input type="radio" name="Q1" id="O1">Not at all
+            <input type="radio" name="Q1" id="O2">Several days
+            <input type="radio" name="Q1" id="O3">More than half the days
+            <input type="radio" name="Q1" id="O4">Nearly every day
+            <button type="submit" onclick="question01()">Submit</button>
+            <p>      </p>
+            <br>
+         </div>
+ 
+        <br>
+        <div class="Questionbox">
+            <h1>2. Feeling down, depressed, or hopless</h1>
+            <input type="radio" name="Q2" id="O21">Not at all
+            <input type="radio" name="Q2" id="O22">Several days
+            <input type="radio" name="Q2" id="O23">More than half the days
+            <input type="radio" name="Q2" id="O24">Nearly every day
+            <button type="submit" onclick="question02()">Submit</button>
+            <p>      </p>
+            <br>
+        </div>
+
+        <br>
+        <div class="Questionbox">
+            <h1>3. Trouble falling or staying asleep, or sleeping too much</h1>
+            <input type="radio" name="Q3" id="O31">Not at all
+            <input type="radio" name="Q3" id="O32">Several days
+            <input type="radio" name="Q3" id="O33">More than half the days
+            <input type="radio" name="Q3" id="O34">Nearly every day
+            <button type="submit" onclick="question03()">Submit</button>
+            <p>      </p>
+            <br>
         </div>
         <br>
         <div class="Questionbox">
-            <h1>2. uggugugiihlkhlhlhlhlh</h1>
+            <h1>4. Feeling tired or having little energy</h1>
+            <input type="radio" name="Q4" id="O41">Not at all
+            <input type="radio" name="Q4" id="O42">Several days
+            <input type="radio" name="Q4" id="O43">More than half the days
+            <input type="radio" name="Q4" id="O44">Nearly every day
+            <button type="submit" onclick="question04()">Submit</button>
+            <p>      </p>
+            <br>
         </div>
         <br>
         <div class="Questionbox">
-            <h1>3. uggugugiihlkhlhlhlhlh</h1>
+            <h1>5. Poor appetite or overeating</h1>
+            <input type="radio" name="Q5" id="O51">Not at all
+            <input type="radio" name="Q5" id="O52">Several days
+            <input type="radio" name="Q5" id="O53">More than half the days
+            <input type="radio" name="Q5" id="O54">Nearly every day
+            <button type="submit" onclick="question05()">Submit</button>
+            <p>      </p>
+            <br>
         </div>
         <br>
         <div class="Questionbox">
-            <h1>4. uggugugiihlkhlhlhlhlh</h1>
+            <h1>6. Feeling bad about yourself or that you are a faliure or have let your family down</h1>
+            <input type="radio" name="Q6" id="O61">Not at all
+            <input type="radio" name="Q6" id="O62">Several days
+            <input type="radio" name="Q6" id="O63">More than half the days
+            <input type="radio" name="Q6" id="O64">Nearly every day
+            <button type="submit" onclick="question06()">Submit</button>
+            <p>      </p>
+            <br>
         </div>
         <br>
         <div class="Questionbox">
-            <h1>5. uggugugiihlkhlhlhlhlh</h1>
+            <h1>7. Trouble concentrating on things, such as reading the newspaper or watching television</h1>
+            <input type="radio" name="Q7" id="O71">Not at all
+            <input type="radio" name="Q7" id="O72">Several days
+            <input type="radio" name="Q7" id="O73">More than half the days
+            <input type="radio" name="Q7" id="O74">Nearly every day
+            <button type="submit" onclick="question07()">Submit</button>
+            <p>      </p>
+            <br>
         </div>
         <br>
         <div class="Questionbox">
-            <h1>6. uggugugiihlkhlhlhlhlh</h1>
+            <h1>8. Moving or speaking so slowly that other people could have noticed. Or the opposite being so figety or restless that you have been moving around a lot more than usual</h1>
+            <input type="radio" name="Q8" id="O81">Not at all
+            <input type="radio" name="Q8" id="O82">Several days
+            <input type="radio" name="Q8" id="O83">More than half the days
+            <input type="radio" name="Q8" id="O84">Nearly every day
+            <button type="submit" onclick="question08()">Submit</button>
+            <p>      </p>
+            <br>
         </div>
         <br>
         <div class="Questionbox">
-            <h1>7. uggugugiihlkhlhlhlhlh</h1>
+            <h1>9. Thoughts that you would be better off dead, or of hurting yourself</h1>
+            <input type="radio" name="Q9" id="O91">Not at all
+            <input type="radio" name="Q9" id="O92">Several days
+            <input type="radio" name="Q9" id="O93">More than half the days
+            <input type="radio" name="Q9" id="O94">Nearly every day
+            <button type="submit" onclick="question09()">Submit</button>
+            <p>      </p>
+            <br>
         </div>
         <br>
-        <div class="Questionbox">
-            <h1>8. uggugugiihlkhlhlhlhlh</h1>
-        </div>
+        <!--Submit the results-->
+        <button type="submit" onclick="marktotal()">Submit</button>
         <br>
-        <div class="Questionbox">
-            <h1>9. uggugugiihlkhlhlhlhlh</h1>
-        </div>
-        <br>
-        <div class="Questionbox">
-            <h1>10.uggugugiihlkhlhlhlhlh</h1>
-        </div>
-        <br>
-        <div class="Questionbox">
-            <h1>11.uggugugiihlkhlhlhlhlh</h1>
-        </div>
-        <br>
-        <div class="Questionbox">
-            <h1>12.uggugugiihlkhlhlhlhlh</h1>
-        </div>
-        <br>
-        <div class="Questionbox">
-            <h1>13.uggugugiihlkhlhlhlhlh</h1>
-        </div>
-        <br>
-        <div class="Questionbox">
-            <h1>14.uggugugiihlkhlhlhlhlh</h1>
-        </div>
-        <br>
-        <div class="Questionbox">
-            <h1>15.uggugugiihlkhlhlhlhlh</h1>
-        </div>
+        
         <br>
 
     </div-->
+
+    <br>
+    <br>
+
+
+    <!--Screening results-->
+    <div class="headingpattern">
+        <h1><u>SCREENING RESULTS</u></h1>
+    </div>
+
+   
+
+    <div class="fontbox01">
+        <br>
+        <p id="demo"></p>
+        <br>
+        <p id="demo01"></p>
+        <br>
+        <p id="demo02"></p>
+        <br>
+        <p id="demo03"></p>
+        <br>
+        <p id="demo04"></p>
+        <br>
+        <p id="demo05"></p>
+        <br>
+        <p id="demo06"></p>
+        <br>
+        <p id="demo07"></p>
+        <br>
+        <p id="demo08"></p>
+        <br>
+        <p id="demo09"></p>
+        <br>
+        <div class="Questionbox">
+            <div class="diagnosisheader"><b><p id="diagnosis"></p></b></div>
+            <div class="depressionscreeningcontent"><p id="content"></p></div>
+            <br>
+            <br>
+        </div>
+        <br><br>
+        <div class="Questionbox">
+            <div class="emergencyfont">
+                <h1>Emergency Contact numbers</h1>
+                <ul>
+                    <li><h2>Sri Lanka Sumithrayo - 0112 674 436</h2></li>
+                    <li><h2>Ambulance - 110</h2></li>
+                    <li><h2>Accident Service-General Hospital-Colombo - 011-2691111</h2></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <button onclick="window.print()">Print this page</button>
+    </div>
+    
 
 </body>
 </html>
