@@ -1,13 +1,15 @@
+let _name = "";
+
 const say = [
-    "Hello! I'm the Depression Score Prediction Chatbot. How are you feeling today?",
-    "How often have you been bothered by any of the following problems in the past two weeks? Little interest or pleasure in doing things.",
-    "How often have you been bothered by any of the following problems in the past two weeks? Feeling down, depressed, or hopeless.",
-    "How often have you been bothered by any of the following problems in the past two weeks? Trouble falling or staying asleep, or sleeping too much.",
-    "How often have you been bothered by any of the following problems in the past two weeks? Feeling tired or having little energy.",
-    "How often have you been bothered by any of the following problems in the past two weeks? Poor appetite or overeating.",
-    "How often have you been bothered by any of the following problems in the past two weeks? Feeling bad about yourself, or that you are a failure, or have let yourself or your family down.",
-    "How often have you been bothered by any of the following problems in the past two weeks? Trouble concentrating on things, such as reading the newspaper or watching television.",
-    "How often have you been bothered by any of the following problems in the past two weeks? Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual.",
+    "Hello! I'm the Depression I'm Excalibur. So what's your name ?",
+    "Nice to meet you buddy! how are you feeling today ?", //Problem solved :)
+    "Great ,So how do you feel when you meet new people ?",
+    "What do you oftenly think about and can you tell me about that ?",
+    "How are you acting when you see one of your favourite food ? ",
+    "How do you think about your parents and friends ?",
+    "How do you think about your job or your education ?",
+    "What do you feel about your whole life ?",
+    "Now we are going to generate a score for the answered questions ,and If you need the score as a report you can click on the button at right side !",
 ];
     
 const chatbot = document.querySelector(".chatbot");
@@ -29,8 +31,12 @@ sendButton.addEventListener("click", () => {
         userInput.value = "";
 
         if (index != 0) {
+            if (index === 1) {
+                _name = userMessage;
+                console.log(_name)
+            }
             if (responses === "") {
-                responses = userMessage
+                responses = userMessage;
             } else {
                 responses = responses + ", " + userMessage;
             }
@@ -38,8 +44,8 @@ sendButton.addEventListener("click", () => {
 
         if (index === 0) {
             setTimeout(() => {
-            addBotMessage(index);
-            index++;
+                addBotMessage(index);
+                index++;
         }, 1000);
     } else {
         addBotMessage(index);
@@ -67,7 +73,7 @@ async function APIPost() {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-        "name": "User",
+        "name": _name,
         "responses": responses
     });
 

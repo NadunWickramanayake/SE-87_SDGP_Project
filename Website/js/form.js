@@ -21,7 +21,9 @@
 		var password = document.getElementById("password");
 		
 		const promise =auth.createUserWithEmailAndPassword(email.value,password.value);
-		promise.catch(e => alert(e.message));
+		promise
+    .then((data) => (window.location.href = "../html/form2.html"))
+    .catch(e => alert(e.message));
 		
 		alert("Signed Up");
 		
@@ -32,7 +34,9 @@
 		var password = document.getElementById("password");
 		
 		const promise =auth.signInWithEmailAndPassword(email.value,password.value);
-		promise.catch(e => alert(e.message));
+		promise
+    .then((data) => (window.location.href = "../html/screening.html"))
+    .catch(e => alert(e.message));
 		
 		alert("Signed In" + email);
 		//Take user to a different page
@@ -41,7 +45,9 @@
   function signOut(){
 		
 		auth.signOut();
-		alert("Signed Out")
+		alert("Signed Out");
+    window.location.href = "../html/index.html";
+
 	}	
   
   auth.onAuthStateChanged(function(user){

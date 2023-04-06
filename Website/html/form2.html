@@ -13,16 +13,17 @@
         <header>
             <a href="#" ><img src="../app_photos/logo.png" class="logo"></a>
             <ul>
-                <li><a href="../html/index.html" class="active">Home</a></li>
+                <li><a href="../html/index.html" class="active">Back to Home</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Services</a>
-                    <div class="dropdown-content">
+                    <a href="../html/ServicePage.html" class="dropbtn">Services</a>
+                    <!-- <div class="dropdown-content">
                         <a href="#">Quick Screening</a>
                         <a href="#">In-Depth Screening</a>
-                    </div>
+                    </div> -->
                 </li>
-                <li><a href="#">About Us</a></li>	
-                <li class="right"><a href="#">Logout</a></li>
+                <li><a href="../html/AboutUs.html">About Us</a></li>	
+                <!-- <li class="right"><a href="#">Logout</a></li> -->
+                <button id="download-pdf" onclick=signOut() >Log Out</button>
             </ul>
         </header>
         
@@ -140,6 +141,27 @@ header {
             .right a:hover {
                 background-color: #706898;
             }
+
+            #download-pdf {
+	margin-top: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  float: right;
+  margin-left: 150px;
+	padding: 10px 20px;
+	background-color: #1109eb;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  #download-pdf:hover {
+	background-color: #006B8E;
+  }
+  
+  
         </style>
     
 	
