@@ -10,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"></script>
     
+    <script type="module" src="../js/script.js"></script>
     
     <!--styleSheet-->
     <link rel="stylesheet" href="../css/login&register.css">
@@ -34,19 +37,13 @@
                 <input type="text" id="Age_Category" placeholder="Are you between age 18-65 ? ( Yes | No )">
 
                 <div id="button_container">
-                    <button href="login.html">Login</button>
-                    <button href="signUp.html">Register</button>
+                    <!--button onclick="register()">Login</button-->
+                    <button onclick="register()">Register</button>
                 </div>
             </div>
         </div>
     </div>
    </div> 
 </body>
-<script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js"></script>
-
-<!--JavaScript linking-->  
-<script src="script.js"></script>  
 </html>

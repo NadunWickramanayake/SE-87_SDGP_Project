@@ -1,13 +1,13 @@
 const botMessages = [
     "Hello! I'm the Depression Score Prediction Chatbot. How are you feeling today?",
-    "On a scale of 0 to 4, with 0 being not at all and 4 being extremely, how often have you been bothered by any of the following problems in the past two weeks? Little interest or pleasure in doing things.",
-    "On a scale of 0 to 4, with 0 being not at all and 4 being extremely, how often have you been bothered by any of the following problems in the past two weeks? Feeling down, depressed, or hopeless.",
-    "On a scale of 0 to 4, with 0 being not at all and 4 being extremely, how often have you been bothered by any of the following problems in the past two weeks? Trouble falling or staying asleep, or sleeping too much.",
-    "On a scale of 0 to 4, with 0 being not at all and 4 being extremely, how often have you been bothered by any of the following problems in the past two weeks? Feeling tired or having little energy.",
-    "On a scale of 0 to 4, with 0 being not at all and 4 being extremely, how often have you been bothered by any of the following problems in the past two weeks? Poor appetite or overeating.",
-    "On a scale of 0 to 4, with 0 being not at all and 4 being extremely, how often have you been bothered by any of the following problems in the past two weeks? Feeling bad about yourself, or that you are a failure, or have let yourself or your family down.",
-    "On a scale of 0 to 4, with 0 being not at all and 4 being extremely, how often have you been bothered by any of the following problems in the past two weeks? Trouble concentrating on things, such as reading the newspaper or watching television.",
-    "On a scale of 0 to 4, with 0 being not at all and 4 being extremely, how often have you been bothered by any of the following problems in the past two weeks? Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual.",
+    "How often have you been bothered by any of the following problems in the past two weeks? Little interest or pleasure in doing things.",
+    "How often have you been bothered by any of the following problems in the past two weeks? Feeling down, depressed, or hopeless.",
+    "How often have you been bothered by any of the following problems in the past two weeks? Trouble falling or staying asleep, or sleeping too much.",
+    "How often have you been bothered by any of the following problems in the past two weeks? Feeling tired or having little energy.",
+    "How often have you been bothered by any of the following problems in the past two weeks? Poor appetite or overeating.",
+    "How often have you been bothered by any of the following problems in the past two weeks? Feeling bad about yourself, or that you are a failure, or have let yourself or your family down.",
+    "How often have you been bothered by any of the following problems in the past two weeks? Trouble concentrating on things, such as reading the newspaper or watching television.",
+    "How often have you been bothered by any of the following problems in the past two weeks? Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual.",
     "Thank you for answering these questions. Your depression score is [INSERT SCORE HERE]. Please seek help if you are experiencing symptoms of depression.",
     ];
     
